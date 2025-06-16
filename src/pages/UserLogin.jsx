@@ -28,7 +28,7 @@ const UserLogin = () => {
         >
           <h3 className=" text-lg font-medium mb-2">What's your email</h3>
           <input
-            className=" bg-[#eeeeee] mb-7 rounded px-4 py-2 border w-full text-lg  placeholder:text-sm"
+            className=" bg-[#eeeeee] mb-7 rounded px-4 py-2  w-full text-lg  placeholder:text-sm"
             type="email"
             value={email}
             onChange={(e) => {
@@ -39,7 +39,7 @@ const UserLogin = () => {
           />
           <h3 className="text-lg font-medium">Enter password</h3>
           <input
-            className=" bg-[#eeeeee] mb-7 rounded px-4 py-2 border w-full text-lg  placeholder:text-sm"
+            className=" bg-[#eeeeee] mb-7 rounded px-4 py-2  w-full text-lg  placeholder:text-sm"
             type="password"
             placeholder="password"
             required
