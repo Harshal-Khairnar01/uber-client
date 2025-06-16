@@ -4,11 +4,40 @@ This project is a clone of the Uber mobile application's frontend, built using R
 
 ## Pages Documentation
 
+### Registration Components
+
+#### User Sign Up (`UserSignUp.jsx`)
+
+- Full name, email, and password fields
+- Form validation using HTML5
+- Mobile-responsive design
+- Consent notice
+- Login redirect option
+
+#### Captain Sign Up (`CaptainSignUp.jsx`)
+
+- Identical structure to User Sign Up
+- Captain-specific messaging
+- Captain login redirect
+- Consistent styling with user signup
+
+### Context Management
+
+#### User Context (`context/userContext.jsx`)
+
+- Global state management using React Context
+- Stores user profile data
+- Custom hook: useUserContext()
+- Structure: email, firstname, lastname
+- Used across authentication flows
+
+
 ### User Login Page
 
 The User Login page provides authentication functionality for regular users of the Uber clone application.
 
 #### Features
+
 - Email and password authentication
 - Form validation
 - "Create new Account" option
@@ -16,6 +45,7 @@ The User Login page provides authentication functionality for regular users of t
 - Responsive mobile-first design
 
 #### Technical Details
+
 - Component: `UserLogin.jsx`
 - State Management: React useState for email, password
 - Form validation using HTML5 attributes
@@ -26,6 +56,7 @@ The User Login page provides authentication functionality for regular users of t
 The Captain Login page handles authentication for drivers (captains) in the application.
 
 #### Features
+
 - Email and password authentication
 - Form validation
 - "Register as a Captain" option
@@ -33,12 +64,14 @@ The Captain Login page handles authentication for drivers (captains) in the appl
 - Consistent UI with User Login
 
 #### Technical Details
+
 - Component: `CaptainLogin.jsx`
 - State Management: React useState for email, password
 - Form validation using HTML5 attributes
 - Tailwind CSS for styling
 
 #### Common Styling
+
 - Full-screen responsive layout
 - Light gray (#eeeeee) input fields
 - Black primary action buttons
@@ -94,11 +127,13 @@ The Home page includes a "Continue" button that redirects users to the login pag
 <div className="bg-cover bg-center pt-10 h-screen flex justify-between flex-col w-full">
   {/* Uber Logo */}
   <img className="w-14 ml-8" src="uber-logo.png" alt="Uber" />
-  
+
   {/* Get Started Section */}
   <div className="bg-white pb-7 py-5 px-10">
     <h2 className="text-2xl font-bold">Get Started with Uber</h2>
-    <Link to="/login" className="...">Continue</Link>
+    <Link to="/login" className="...">
+      Continue
+    </Link>
   </div>
 </div>
 ```
