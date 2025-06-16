@@ -4,6 +4,48 @@ This project is a clone of the Uber mobile application's frontend, built using R
 
 ## Pages Documentation
 
+### User Login Page
+
+The User Login page provides authentication functionality for regular users of the Uber clone application.
+
+#### Features
+- Email and password authentication
+- Form validation
+- "Create new Account" option
+- "Sign in as Captain" alternative
+- Responsive mobile-first design
+
+#### Technical Details
+- Component: `UserLogin.jsx`
+- State Management: React useState for email, password
+- Form validation using HTML5 attributes
+- Tailwind CSS for styling
+
+### Captain Login Page
+
+The Captain Login page handles authentication for drivers (captains) in the application.
+
+#### Features
+- Email and password authentication
+- Form validation
+- "Register as a Captain" option
+- "Sign in as User" alternative
+- Consistent UI with User Login
+
+#### Technical Details
+- Component: `CaptainLogin.jsx`
+- State Management: React useState for email, password
+- Form validation using HTML5 attributes
+- Tailwind CSS for styling
+
+#### Common Styling
+- Full-screen responsive layout
+- Light gray (#eeeeee) input fields
+- Black primary action buttons
+- Role-specific accent colors
+  - User: Orange (#f99705)
+  - Captain: Yellow (#f9c005)
+
 ### Home Page
 
 The Home page serves as the landing page for the Uber clone application. It provides users with a simple and intuitive interface to get started with the service.
