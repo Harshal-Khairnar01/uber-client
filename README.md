@@ -2,6 +2,42 @@
 
 This project is a clone of the Uber mobile application's frontend, built using React and modern web technologies.
 
+## API Documentation
+
+### User Endpoints
+
+1. **Login** - `POST /user/login`
+
+   - Body: `{ email, password }`
+   - Returns: User data and auth token
+
+2. **Register** - `POST /user/register`
+
+   - Body: `{ fullname: { firstname, lastname }, email, password }`
+   - Returns: User data and auth token
+
+3. **Profile** - `GET /user/profile`
+   - Header: `Authorization: Bearer {token}`
+   - Returns: User profile data
+
+### Captain Endpoints
+
+1. **Login** - `POST /captain/login`
+
+   - Body: `{ email, password }`
+   - Returns: Captain data and auth token
+
+2. **Profile** - `GET /captain/profile`
+   - Header: `Authorization: Bearer {token}`
+   - Returns: Captain profile data
+
+### Authentication Notes
+
+- JWT tokens stored in localStorage
+- Protected routes use wrapper components
+- Automatic redirects on unauthorized access
+- Environment variable: `VITE_BASE_URL` for API base URL
+
 ## Pages Documentation
 
 ### Registration Components
@@ -30,7 +66,6 @@ This project is a clone of the Uber mobile application's frontend, built using R
 - Custom hook: useUserContext()
 - Structure: email, firstname, lastname
 - Used across authentication flows
-
 
 ### User Login Page
 
