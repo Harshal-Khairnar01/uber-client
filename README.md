@@ -114,15 +114,72 @@ The Captain Login page handles authentication for drivers (captains) in the appl
   - User: Orange (#f99705)
   - Captain: Yellow (#f9c005)
 
-### Home Page
+### Home Pages
 
-The Home page serves as the landing page for the Uber clone application. It provides users with a simple and intuitive interface to get started with the service.
+#### User Home Page
 
-#### Features
+The main interface for users to book rides and interact with the application.
 
-- **Header Logo**: Displays the Uber logo in the top-left corner of the page
-- **Background Image**: Features a full-screen background image related to transportation
-- **Get Started Section**: Contains a call-to-action section at the bottom of the page
+##### Core Components
+
+1. **Location Search Panel**
+
+   - Location search and selection
+   - Interactive suggestions
+   - Pickup and destination inputs
+
+2. **Vehicle Selection Panel**
+
+   - UberGo (4 seater)
+   - Auto rickshaw (3 seater)
+   - Bike (2 seater)
+   - Price estimates and ETAs
+
+3. **Booking Flow Panels**
+   - Ride confirmation
+   - Driver search animation
+   - Waiting status display
+   - Trip details view
+
+##### Technical Implementation
+
+- State Management:
+  - Multiple panel states (search, vehicle, confirmation)
+  - GSAP animations for transitions
+  - Ref-based panel control
+
+### Protected Routes
+
+#### User Protected Wrapper
+
+- Validates authentication token
+- Redirects unauthorized users
+- Fetches user profile
+- Updates context state
+- Handles loading states
+
+#### Captain Protected Wrapper
+
+- Captain authentication check
+- Profile data management
+- Protected route access
+- Loading state handling
+
+### Logout Implementation
+
+#### User Logout
+
+- Endpoint: `GET /user/logout`
+- Clears authentication token
+- Resets user context
+- Redirects to login page
+
+#### Captain Logout
+
+- Endpoint: `GET /captain/logout`
+- Removes captain session
+- Cleans up local storage
+- Returns to login screen
 
 #### Component Structure
 

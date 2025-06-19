@@ -4,13 +4,12 @@ import { useUserContext } from "../context/userContext";
 import axios from "axios";
 
 const UserProtectedWrapper = ({ children }) => {
-  const token=localStorage.getItem('token');
+  const token = localStorage.getItem("token");
   const navigate = useNavigate();
-  const {setUser}=useUserContext();
-    const [loading, setLoading] = useState(true);
+  const { setUser } = useUserContext();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-   
     if (!token) {
       navigate("/login");
     }
@@ -29,16 +28,13 @@ const UserProtectedWrapper = ({ children }) => {
       })
       .catch((err) => {
         console.log(err);
-        localStorage.removeItem('token');
+        localStorage.removeItem("token");
         navigate("/captain-login");
       });
   }, [token]);
 
-
-    if(loading){
-    return(
-      <div>Loading ... </div>
-    )
+  if (loading) {
+    return <div>Loading ... </div>;
   }
 
   return <>{children}</>;
